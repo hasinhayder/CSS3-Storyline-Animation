@@ -115,6 +115,8 @@
 		width: 410px;
 		opacity: 0;
 		transform:scale(2) rotate("10deg");
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
 	}
 
 	#se1-2{
@@ -125,6 +127,8 @@
 		/*-webkit-transform:scale(3),rotate('0deg');*/
 		opacity:0;
 		font-size: 36px;
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
 	}
 
 	#se1-3{
@@ -136,12 +140,16 @@
 		transform:scale(2);
 		opacity: 0;
 		font-size: 36px;
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
 	}
 
 	#se1-4{
 		transform:scale(0.5);
 		opacity: 0;
 		position: absolute;
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
 	}
 
 	#se1-5{
@@ -149,6 +157,8 @@
 		right:0px;
 		opacity: 0;
 		top:100;
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
 	}
 
 	#se1-6, #se1-7,  #se1-8, #se1-9, #se1-10{
@@ -156,6 +166,8 @@
 		top:200px;
 		left: 40px;
 		opacity: 0;
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
 	}
 
 	#se1-7{
@@ -178,6 +190,8 @@
 		top:500;
 		left:700;
 		opacity: 0;
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
 	}
 
 	#se1-12{
@@ -186,6 +200,8 @@
 		top:-120px;
 		opacity: 0;
 		width: 150px;
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
 	}
 	</style>
 	<script src='js/prefixfree.js'></script>
@@ -208,67 +224,67 @@
 	<div class="container">
 		<ul class="slider">
 			<li class="slide">
-				<img id='se1-4' src="img/comic/1.jpg" alt=""><div class="element se1">
-				<img id='se1-5' src="img/comic/2.png" alt=""><div class="element se1">
+				<img id='se1-4' src="img/comic/1.jpg" alt="">
+				<img id='se1-5' src="img/comic/2.png" alt="">
 				<h1 id="se1-1">THIS SUMMER</h1>
 				<h1 id="se1-2">THIS <span class="hcolor">HOTTER</span> NIGHT</h1>
 				<h1 id="se1-3">& THIS <span class="hcolor">HOTTEST</span> FIGHT</h1>
 				
-				<img id='se1-11' src="img/comic/8.jpg" alt=""><div class="element se1">
+				<img id='se1-11' src="img/comic/8.jpg" alt="">
 
 				<h1 id="se1-12"><span class="hcolor">STAY<br/> TUNED<br/>FOR</br>MORE</span></h1>
 
-				<img id='se1-6' src="img/comic/3.png" alt=""><div class="element se1">
-				<img id='se1-7' src="img/comic/4.png" alt=""><div class="element se1">
-				<img id='se1-8' src="img/comic/5.png" alt=""><div class="element se1">
-				<img id='se1-9' src="img/comic/6.png" alt=""><div class="element se1">
-				<img id='se1-10' src="img/comic/7.png" alt=""><div class="element se1">
+				<img id='se1-6' src="img/comic/3.png" alt="">
+				<img id='se1-7' src="img/comic/4.png" alt="">
+				<img id='se1-8' src="img/comic/5.png" alt="">
+				<img id='se1-9' src="img/comic/6.png" alt="">
+				<img id='se1-10' src="img/comic/7.png" alt="">
 				
-			</div>
-		</li>
-	</ul>
-</div>
+			</li>
+		</ul>
+	</div>
 
-<script type='text/javascript'>
-$(document).ready(function(){
-	$("#se1-1").transition({rotate:"360deg",scale:1,opacity:1,delay:1000},500,"snap")
-	.transition({y:-70},800,"ease",function(){
-		$("#se1-2").transition({opacity:1,y:-60},500,"snap")
-		.transition({x:-120},500,"ease",function(){
-			$("#se1-3").transition({opacity:1,scale:1},800,"snap",function(){
-				$("#se1-1").transition({opacity:0,scale:2,x:10,y:10,delay:1000},"ease");
-				$("#se1-2").transition({opacity:0,scale:2,x:10,y:10,delay:1000},"ease");
-				$("#se1-3").transition({opacity:0,scale:2,x:10,y:10,delay:1000},"ease");
-				$("#se1-4").transition({opacity:1,scale:0.75,y:-100,x:100,delay:200},800)
-				.transition({scale:1,x:160,y:-60},500)
-				.transition({opacity:0,scale:3},500);
-				$("#se1-5").transition({opacity:1,y:-60,x:-00,delay:1100},800)
-				.transition({x:300,delay:2500});
+	<script type='text/javascript'>
+	$(document).ready(function(){
+		$("#se1-1").transition({rotate:"360deg",scale:1,opacity:1,delay:1000},500,"snap")
+		.transition({y:-70},800,"ease",function(){
+			$("#se1-2").transition({opacity:1,y:-60},500,"snap")
+			.transition({x:-120},500,"ease",function(){
+				$("#se1-3").transition({opacity:1,scale:1},800,"snap",function(){
+					$("#se1-1").transition({opacity:0,scale:2,x:10,y:10,delay:1000},"ease");
+					$("#se1-2").transition({opacity:0,scale:2,x:10,y:10,delay:1000},"ease");
+					$("#se1-3").transition({opacity:0,scale:2,x:10,y:10,delay:1000},"ease");
+					$("#se1-4").transition({opacity:1,scale:0.75,y:-100,x:100,delay:200},800)
+					.transition({scale:1,x:160,y:-60},500)
+					.transition({opacity:0,scale:3},500);
+					$("#se1-5").transition({opacity:1,y:-60,x:-00,delay:1100},800)
+					.transition({x:300,delay:2500});
 
-				$("#se1-6").transition({opacity:1,x:15,delay:1500})
-				.transition({opacity:0},function(){
-					$("#se1-7").transition({opacity:1,x:15})
+					$("#se1-6").transition({opacity:1,x:15,delay:1500})
 					.transition({opacity:0},function(){
-						$("#se1-8").transition({opacity:1,x:15})
+						$("#se1-7").transition({opacity:1,x:15})
 						.transition({opacity:0},function(){
-							$("#se1-9").transition({opacity:1,x:15})
-							.transition({opacity:0,scale:2},function(){
-								$("#se1-10").transition({opacity:1,x:10})
-								.transition({opacity:0,y:100});
+							$("#se1-8").transition({opacity:1,x:15})
+							.transition({opacity:0},function(){
+								$("#se1-9").transition({opacity:1,x:15})
+								.transition({opacity:0,scale:2},function(){
+									$("#se1-10").transition({opacity:1,x:10})
+									.transition({opacity:0,y:100});
+								});
 							});
 						});
 					});
-				});
 
-				$("#se1-11").transition({opacity:1,y:-50,x:-000,delay:4100},1200,"snap",function(){
-					$("#se1-12").transition({opacity:1,y:150},500,"snap")
-				});
+					$("#se1-11").transition({opacity:1,y:-50,x:-000,delay:4100},1200,"snap",function(){
+						$("#se1-12").transition({opacity:1,y:150},500,"snap")
+					});
 
-			});
-		});
+				});
+});
 });
 })
 </script>
 
 </body>
 </html>
+m@creatrix.us
